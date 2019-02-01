@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <style type="text/css">
+            h1 { color:rgb(50, 119, 189) }
+            p { font-size: 20pt; color:rgb(8, 57, 121)}
+        </style>
+    </head>
+    <body>
+    <h1>WORD COUNT</h1>
+        <p>단어를 입력하세요.</p>
+        <form action="{% url 'count' %}">
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <input type="submit" value="확인" />        
+        </form>
+        <a href="{% url 'about' %}">ABOUT</a>
+    </body>
+</html>

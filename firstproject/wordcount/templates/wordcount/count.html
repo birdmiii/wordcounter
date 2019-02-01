@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style type="text/css">
+            h1 {color:rgb(150, 224, 39)}
+            p2 {color:green; font-size: 20pt}
+        </style>
+    </head>    
+    <body> 
+        <h1>당신이 입력한 텍스트는 {{total}} 단어로 구성되어 있습니다.</h1>
+        <h2>입력한 텍스트: </h2>
+        <p2>{{ fulltext }}</p2> 
+
+        <h2>단어 카운트:</h2>
+        {% for word, countTotal in dictionary %}
+       <p2> {{ word }} -> {{ countTotal }}</p2>
+        <br>
+        {% endfor %}
+        <br>
+        <a href="{% url 'home' %}"> RETURN </a>
+    </body>
+</html>
